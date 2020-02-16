@@ -28,17 +28,17 @@ import dobject.groupthink.gtk_tools as gtk_tools
 import dobject.groupthink.sugar_tools as sugar_tools
 
 from gettext import gettext as _
-from sugar.activity import activity
-from sugar import profile
+from sugar3.activity import activity
+from sugar3 import profile
 
 try:
     # 0.86+ toolbar widgets
-    from sugar.activity.widgets import ActivityToolbarButton, StopButton
-    from sugar.graphics.toolbarbox import ToolbarBox, ToolbarButton
+    from sugar3.activity.widgets import ActivityToolbarButton, StopButton
+    from sugar3.graphics.toolbarbox import ToolbarBox, ToolbarButton
     _USE_OLD_TOOLBARS = False
 except ImportError:
     # Pre-0.86 toolbar widgets
-    from sugar.activity.activity import ActivityToolbox
+    from sugar3.activity.activity import ActivityToolbox
     _USE_OLD_TOOLBARS = True
 
 def score_codec(score_or_opaque, pack_or_unpack):
